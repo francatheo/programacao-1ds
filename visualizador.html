@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Slideshow de Imagens</title>
+<style>
+  .slideshow {
+    max-width: 500px; /* Ajuste a largura máxima conforme necessário */
+    margin: 0 auto; /* Centraliza o slideshow na página */
+  }
+
+  .slideshow img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do container */
+    display: block; /* Remove espaços extras abaixo da imagem */
+  }
+</style>
+</head>
+<body>
+
+<div class="slideshow">
+  <img id="currentImage" src="" alt="Slideshow Image">
+</div>
+
+<script>
+  var slide = document.getElementById('currentImage');
+  var images = [
+    'https://wallpapers.com/images/high/fortnite-profile-pictures-ye23z3beothsx625.webp',
+    'https://i0.wp.com/dropsdejogos.uai.com.br/wp-content/uploads/sites/10/2023/12/fortnite-scaled.jpg?resize=950%2C534&ssl=1',
+    'https://wallpapers.com/images/hd/fortnite-pictures-b5kfcchwazwiz3cs.jpg'
+  ];
+  var time = 2000;
+  var count = 0;
+
+  function moveSlideShow() {
+    slide.src = images[count];
+
+    if (count < images.length - 1) {
+      count++;
+    } else {
+      count = 0;
+    }
+
+    setTimeout(moveSlideShow, time);
+  }
+
+  window.onload = moveSlideShow;
+</script>
+
+</body>
+</html>
