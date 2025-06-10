@@ -1,0 +1,9 @@
+Sistema de classificação de prateleira
+preco = float(input("Digite o preço do produto: R$ "))
+
+**.")if preco <= 100:
+    print("O produto deve ser colocado na prateleira de **Baixo custo**.")
+elif 101 <= preco <= 500:
+    print("O produto deve ser colocado na prateleira de **Médio custo**.")
+else:
+    print("O produto deve ser colocado na prateleira de **Alto custo
